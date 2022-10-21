@@ -3,7 +3,7 @@ const User = require('../src/User')
 const ScooterApp = require('../src/ScooterApp')
 
 // ScooterApp tests here
-objectTest = new ScooterApp()
+ const objectTest = new ScooterApp()
 
 describe("Test ScooterApp Class", ()=>{
     test("App is Object",()=>{
@@ -28,7 +28,7 @@ describe("Testing registration",()=>{
         objectTest.registeredUsers =[]
         testUser = new User("Tyler","Password", 24)
         objectTest.register(testUser)
-        expect(objectTest.registeredUsers).toStrictMatch([testUser])
+        expect(objectTest.registeredUsers).toEqual([testUser])
     })
     test("User exists",()=>{
         objectTest.register(new User("Tyler1","Password",24))

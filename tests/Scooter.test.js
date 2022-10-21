@@ -1,18 +1,18 @@
 const Scooter = require('../src/Scooter')
 const User = require('../src/User')
 
-testObject = new Scooter("Brooklyn", new User("Tyler","Password",24))
+const testObject = new Scooter("Brooklyn", new User("Tyler","Password",24))
 
 //typeof scooter === object
 describe('Test Scooter Class', () => {
   test('is Object', () => {
-    expect(typeof(testObject).toBe("object"))
+    expect(typeof(testObject)).toBe("object")
   })
   test("Station is Correct",()=>{
     expect(testObject.station).toBe("Brooklyn")
   })
   test("User is Correct",()=>{
-    expect(testObject.username).toBe("Tyler")
+    expect(testObject.user.username).toBe("Tyler")
   })
 })
 

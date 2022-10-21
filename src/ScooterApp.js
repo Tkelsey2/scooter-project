@@ -13,24 +13,25 @@ class ScooterApp {
     }
 
     this.registeredUsers =[]
+
     ScooterApp.sessions.push(this)
   }
 
   static sessions =[]
 
-  register(User){
-    for(let i = 0; i < this,this.registeredUsers.length; i++){
-      if(this.registeredUsers[i].username === User.username){
+  register(user){
+    for(let item of this.registeredUsers){ 
+      if(item.username === user.username ){
         console.log("Error user already registered")
       }
-      else if(User.age <=17){
+    }
+        if(user.age <=17){
         console.log("You are too young to register")
       }
       else {
-        this.registeredUsers.push(User)
+        this.registeredUsers.push(user)
         console.log("Registered Successfully")
       }
-    }
   }
 
   logIn(username,password){
@@ -69,7 +70,7 @@ class ScooterApp {
         }
       })
     }
-    return response
+    console.log(response)
   }
 }
 
