@@ -1,4 +1,4 @@
-const User = require('../src/User')
+const ScooterUser = require('../src/User')
 
 // User tests here
 
